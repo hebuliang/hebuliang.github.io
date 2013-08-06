@@ -1,0 +1,54 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+#content>div, #content>article {
+  padding-top: 0px;
+}
+body>header, body>footer, body #content>article, body #content>div>article, body #content>div>section {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+body>nav {
+  padding-left: 30px;
+  padding-right: 30px;
+  background: linear-gradient(#e0e0e0,#ccc,#b0b0b0);
+}
+
+aside.sidebar a {
+  text-decoration: none;
+}
+
+#main {
+  border: 1px solid #e0e0e0;
+  border-bottom: 0px;
+  border-radius: 5px 5px 0 0;
+}
+
+#content .blog-index article {
+  padding-top: 1em;
+}
+
+#blog-archives h2:first-child {
+  padding-top: .6em;
+}
+
+#content .blog-index article h1 {
+  font-size: 2em;
+}
+
+.entry-content {
+  padding: 0px 4px;
+}
+
+article header p.meta {
+  left: 5px;
+}
+
+.avatar-wrap {
+  top: 12px;
+  position: relative;
+}
+.avatar-wrap > img{
+  border-radius: 50%;
+}

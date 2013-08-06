@@ -1,0 +1,19 @@
+body > header {
+  background: transparent;
+  padding: 15px 3px;
+  h1 {
+    display: inline-block;
+    margin: 0;
+    a, a:visited, a:hover {
+      color: #444;
+      text-decoration: none;
+    }
+  }
+  h2 {
+    margin: .2em 0 0;
+    @extend .sans;
+    font-size: 1em;
+    color: $subtitle-color;
+    font-weight: normal;
+  }
+}
