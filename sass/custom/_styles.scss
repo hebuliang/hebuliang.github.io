@@ -7,6 +7,12 @@
 body>header, body>footer, body #content>article, body #content>div>article, body #content>div>section {
   padding-left: 25px;
   padding-right: 25px;
+  position: relative;
+}
+
+body>header>hgroup {
+  position: relative;
+  left: -27px;
 }
 
 body>nav {
@@ -47,6 +53,7 @@ article header p.meta {
 
 .avatar-wrap {
   top: 12px;
+  left: 8px;
   position: relative;
 }
 .avatar-wrap > img{
