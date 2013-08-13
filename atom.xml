@@ -4,7 +4,7 @@
   <title><![CDATA[深藏功与名]]></title>
   <link href="http://hebuliang.github.io/atom.xml" rel="self"/>
   <link href="http://hebuliang.github.io/"/>
-  <updated>2013-08-13T22:33:37+08:00</updated>
+  <updated>2013-08-13T23:17:28+08:00</updated>
   <id>http://hebuliang.github.io/</id>
   <author>
     <name><![CDATA[He Liang]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[关于事件队列]]></title>
+    <title type="html"><![CDATA[理解事件队列]]></title>
     <link href="http://hebuliang.github.io/blog/2013/08/13/events-and-timing-in-depth/"/>
     <updated>2013-08-13T19:28:00+08:00</updated>
     <id>http://hebuliang.github.io/blog/2013/08/13/events-and-timing-in-depth</id>
