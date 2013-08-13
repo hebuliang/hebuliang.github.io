@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "关于事件队列"
+title: "理解事件队列"
 date: 2013-08-13 19:28
 comments: true
 categories: 
