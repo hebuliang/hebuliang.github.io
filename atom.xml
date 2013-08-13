@@ -4,7 +4,7 @@
   <title><![CDATA[深藏功与名]]></title>
   <link href="http://hebuliang.github.io/atom.xml" rel="self"/>
   <link href="http://hebuliang.github.io/"/>
-  <updated>2013-08-13T22:27:44+08:00</updated>
+  <updated>2013-08-13T22:30:58+08:00</updated>
   <id>http://hebuliang.github.io/</id>
   <author>
     <name><![CDATA[He Liang]]></name>
@@ -21,6 +21,9 @@
     <content type="html"><![CDATA[<p>这篇文章的原型是来自于<a href="http://javascript.info/">JavaScript Tutorial</a>（作者:Ilya Kantor）的其中一小节<a href="http://javascript.info/tutorial/events-and-timing-depth">Events and timing in-depth</a>，不能算是翻译，因为我不会把一整节内容都搬过来，只写关键的事件队列部分。</p>
 
 <p>浏览器中的JavaScript引擎是一种基于事件驱动的单线程模型，无论在什么时候都只且只有一个JavaScript线程在运行程序，<strong>事件</strong>可以看作是浏览器分发给JavaScript引擎的许多任务，这些任务可以是JavaScript引擎当前执行的代码块，也可以来自浏览器内核的其它线程，比如鼠标点击事件，定时器时间到达通知，异步请求状态变更通知等，JavaScript引擎一直等待着任务队列中任务的到来，由于JavaScript单线程的关系，这些任务必须得排队等着被引擎挨个收拾。</p>
+
+<!--more-->
+
 
 <p>浏览器本身是允许多个线程异步执行的，除了JavaScript引擎线程以外还有GUI渲染线程（负责界面渲染）、浏览器事件触发线程、定时触发线程、HTTP请求线程、AJAX请求线程、下载线程等等，其中前三个线程属于常驻线程，说到这里不得不提一下GUI渲染线程，虽说浏览器支持线程异步执行，但是JavaScript线程和GUI渲染线程是互斥的，也就是说在JavaScript脚本操作DOM时，GUI渲染线程处于挂起状态不会有任何动作，比如添加元素、删除元素或者改变元素外观等等，界面的更新并不会立即体现出来，所有的操作都会保存在一个队列中，直到脚本运行结束后，GUI渲染线程发现脚本执行触发了界面的Reflow或者Repaint动作（关于这两个动作的区别和触发时机不在本文详细说明，有兴趣的可以自行google），此时才会接手对界面进行渲染（这也是为什么网页优化建议中js文件要放在html内容的最后，就是因为加载js的时候，会阻塞DOM树的构建），下面我们看个小栗子：</p>
 
